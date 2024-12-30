@@ -20,29 +20,74 @@ Late chunking, as implemented by Chonkie, provides several advantages:
 - Better context preservation
 - Dynamic chunk size adaptation
 
-## 🛠Quick Implementation Guide
+## Installation
 
-### 1. Basic Setup
+1. Clone the repository:
 ```bash
-# Create virtual environment
+git clone https://github.com/lesteroliver911/rag-chonkie-llamaparse-openai
+cd pdf-qa-rag
+```
+
+2. Create and activate a virtual environment:
+```bash
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
 
-# Install dependencies
-pip install streamlit python-dotenv llama-parse chonkie tokenizers langchain-openai tiktoken nest-asyncio
+# On Windows
+venv\Scripts\activate
+
+# On macOS/Linux
+source venv/bin/activate
 ```
 
-### 2. Environment Configuration
-Create `.env` file:
-```env
-OPENAI_API_KEY=your_openai_api_key
-LLAMA_CLOUD_API_KEY=your_llama_api_key
-```
-
-### 3. Run the Application
+3. Install the required packages:
 ```bash
-streamlit run app.py
+pip install streamlit llama-parse "chonkie[st]" langchain-openai faiss-cpu python-dotenv
 ```
+
+## Configuration
+
+1. Create a `.env` file in the project root:
+```bash
+touch .env
+```
+
+2. Add your API keys to the `.env` file:
+```
+OPENAI_API_KEY=your-openai-api-key
+LLAMA_CLOUD_API_KEY=your-llamaparse-api-key
+```
+
+3. Create necessary project directories:
+```bash
+mkdir tmp
+mkdir data
+```
+
+## File Structure
+```
+pdf-qa-rag/
+├── app.py
+├── .env
+├── requirements.txt
+├── README.md
+├── tmp/
+└── data/
+```
+
+## Usage
+
+1. Start the Streamlit application:
+```bash
+streamlit run main.py
+```
+
+2. Open your web browser and navigate to the URL shown in the terminal (typically `http://localhost:8501`)
+
+3. Upload a PDF document using the file uploader
+
+4. Wait for the document to be processed
+
+5. Enter your questions in the text input field
 
 ## 💡 Key Implementation Details
 
