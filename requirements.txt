@@ -1,0 +1,13 @@
+streamlit
+llama-parse
+chonkie
+langchain-openai
+langchain-core
+langchain-community
+sentence-transformers
+torch
+transformers
+faiss-cpu
+openai
+python-dotenv
+watchdog 
