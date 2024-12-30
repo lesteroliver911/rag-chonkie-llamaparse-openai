@@ -2,7 +2,7 @@
 
 A practical implementation showcasing the power of late chunking strategy using Chonkie, combined with LlamaParse and LangChain. This project serves as a learning tool and development accelerator for building efficient RAG (Retrieval-Augmented Generation) applications.
 
-![Application Demo](/blob/main/chonkie-latechunking-llamaparse-openai-demo.gif)
+![Application Demo](chonkie-latechunking-llamaparse-openai-demo.gif)
 
 ## Purpose
 
